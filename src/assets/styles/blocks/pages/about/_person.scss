@@ -1,0 +1,155 @@
+.person {
+  width: 100%;
+  height: 410px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.person__picture {
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  background: url('/assets/images/bg/hero.jpg') no-repeat;
+  background-size: cover;
+}
+
+.person__links {
+  width: 250px;
+  height: 90px;
+
+  padding: 25px;
+  position: absolute;
+  top:0;
+  left: 0;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+
+.socials__item {
+  width: 40px;
+  height: 40px;
+  margin-right: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials__link-icon {
+  display: block;
+  width: 30px;
+  height: 18px;
+  fill: $white;
+
+  &:hover {
+    fill: $blue;
+  }
+}
+
+.person__menu {
+  width: 90px;
+  height: 90px;
+  padding: 25px;
+  position: absolute;
+  top:0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger {
+  width: 40px;
+  height: 40px;
+  background: svg-load('hamburger.svg', fill=$white) center center no-repeat;
+  cursor: pointer;
+
+  &:hover {
+    background: svg-load('hamburger.svg', fill=$blue) center center no-repeat;
+  }
+}
+
+.person__title {
+  width: 466px;
+  height: 270px;
+  margin-top: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.person__bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left:0;
+  background: svg-load('stars1.svg', fill= $white, width= 440px, height= 440px) center center no-repeat;
+  opacity: .1;
+}
+
+.section-title {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  overflow: hidden;
+}
+
+.section-title__pic {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+.user__description {
+  text-align: center;
+}
+
+.user__name {
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 35px;
+  color: $white;
+}
+
+.user__info {
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  color: $white;
+}
+
+.down-btn {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: svg-load('arrow_down.svg', fill=$white) center center no-repeat;
+  opacity: .5;
+  transition: opacity .5s ease;
+
+  position: absolute;
+
+  bottom: -15%;
+  right: 50%;
+  transform: translate(50%, -15%);
+
+  z-index: 3;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+

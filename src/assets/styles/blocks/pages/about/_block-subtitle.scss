@@ -1,0 +1,31 @@
+.block-subtitle {
+  position: relative;
+  color: $dark;
+  font-family: sansus, sans-serif;
+  font-size: 35px;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  margin-bottom: 40px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 90px;
+    height: 3px;
+    background: $dark;
+
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, 30px);
+  }
+}
+
+.block-subtitle_graphics {
+  width: 40%;
+  line-height: 1;
+  margin-bottom: 50px;
+  &:after {
+    top: 60px;
+  }
+}

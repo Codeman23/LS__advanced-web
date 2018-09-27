@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="125px" viewBox="0 0 104 125" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>stars3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="stars3" fill="#FF001F" fill-rule="nonzero">
+            <circle id="Oval" cx="5.182" cy="60.182" r="5.182"></circle>
+            <circle id="Oval" cx="50.182" cy="5.182" r="5.182"></circle>
+            <circle id="Oval" cx="31.182" cy="121.182" r="2.848"></circle>
+            <circle id="Oval" cx="65.182" cy="55.182" r="2.848"></circle>
+            <circle id="Oval" cx="100.182" cy="49.182" r="2.848"></circle>
+            <circle id="Oval" cx="94.182" cy="104.182" r="2.848"></circle>
+            <path d="M50.7793834,3.86089242 L31.3443434,122.517948 L4.74902566,60.1202185 L50.7793834,3.86089242 Z M49.5866166,6.50310758 L5.61697434,60.2437815 L31.0216566,119.848052 L49.5866166,6.50310758 Z" id="Shape"></path>
+            <path d="M100.576754,49.0289789 L94.4978104,105.188289 L4.59551043,60.3078482 L50.1389182,4.64368321 L100.576754,49.0289789 Z M99.7892458,49.3350211 L50.2270818,5.72031679 L5.77048957,60.0561518 L93.8681896,104.035711 L99.7892458,49.3350211 Z" id="Shape"></path>
+            <polygon id="Shape" points="64.8496335 55.0102683 65.5163665 55.3537317 31.5163665 121.354732 30.8496335 121.011268"></polygon>
+        </g>
+    </g>
+</svg>

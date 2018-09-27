@@ -1,0 +1,14 @@
+//config
+@import "./config/_variables";
+@import "./config/_mixin";
+
+//base
+@import 'normalize.css';
+@import './layout/fonts.scss';
+@import './layout/base.scss';
+@import './layout/_adjustment';
+@import './layout/_media';
+
+//sections
+@import './blocks/*.scss';
+@import './blocks/**/**/*.scss';

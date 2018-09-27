@@ -1,0 +1,166 @@
+.person_blog {
+  height: 230px;
+}
+
+.person__title_blog {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -10%)
+}
+
+
+.user__blog {
+  color: $white;
+  font-family: sansus, sans-serif;
+  text-transform: uppercase;
+  font-size: 63px;
+  margin-top: 10px;
+}
+
+.user__blog-desc {
+  color: $white;
+  font-size: 16px;
+  font-family: Roboto, Helvetica, sans-serif;
+}
+
+.blog {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+
+.blog__triangles {
+  position: relative;
+  width: 100%;
+  height: 240px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 70px;
+  &:after{
+    content:'';
+    width: 100%;
+    height: 100%;
+    background: svg-load('bg.svg', fill=$beige) no-repeat center top;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+  }
+}
+
+.blog__info {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: $beige;
+
+  display: flex;
+}
+
+.blog__menu {
+  width: 30%;
+  height: 200px;;
+  padding-right: 40px;
+}
+
+.blog-menu__list {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.blog-menu__item {
+  margin-bottom: 30px;
+  width: 300px;
+}
+
+.blog-menu__link {
+  color: #455a64;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color .5s ease;
+
+  &:hover {
+    color: $blue;
+  }
+}
+
+.blog-menu__link_active {
+  color: $blue;
+  position: relative;
+
+  &:after {
+    content: '';
+    width: 3px;
+    height: 100%;
+    background: $blue;
+    position: absolute;
+    right: -20px;
+    top: 0;
+
+  }
+}
+
+.blog__content {
+  width: 70%;
+  height: auto;
+  background: $beige;
+  padding-left: 40px;
+  margin-bottom: 160px;
+}
+
+.blog__item {
+  max-width: 880px;
+  position: relative;
+  margin-bottom: 140px;
+}
+
+.blog__item_first {
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: $light-grey;
+    bottom: -70px;
+    left: 0;
+  }
+}
+
+.blog__title {
+  color: $dark;
+  font-size: 35px;
+  font-family: sansus, sans-serif;
+  margin-bottom: 30px;
+  line-height: .5;
+}
+
+.blog_date {
+  color: $blue;
+  margin-bottom: 22px;
+}
+
+.blog__text {
+  color: #455a64;
+  line-height: 26px;
+  margin-bottom: 20px;
+}
+
+.blog__image {
+  max-width: 880px;
+  height: auto;
+}
+
+

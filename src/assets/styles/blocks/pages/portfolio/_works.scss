@@ -1,0 +1,175 @@
+.works {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+
+.works__triangles {
+  position: relative;
+  width: 100%;
+  height: 340px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 70px;
+   &:after{
+     content:'';
+     width: 100%;
+     height: 100%;
+     background: svg-load('bg.svg', fill=#0d1120) no-repeat center top;
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     z-index: 0;
+     opacity: .8;
+   }
+}
+
+.about__left-title_portfolio {
+  z-index: 1;
+  &::before {
+    background: svg-load('stars2.svg', fill= #313441, width= 250px, height= 170px) center center no-repeat;
+  }
+}
+
+.block-title_portfolio {
+  color: $white;
+}
+
+.works__descr {
+  position: relative;
+  width: 100%;
+
+  display: flex;
+  background: $white;
+}
+
+.works__left {
+  width: 50%;
+  background: $beige;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.works__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.block-subtitle_works {
+  width: 60%;
+  line-height: 1;
+  margin-bottom: 50px;
+  &:after {
+    top: 60px;
+  }
+}
+
+.works__tags {
+  color: $blue;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.button-graphic {
+  padding: 12px 20px;
+  font-size: 16px;
+  color: $white;
+  cursor: pointer;
+  border: 0;
+  background: $blue;
+  transition: background .5s ease-in-out;
+  text-decoration: none;
+
+  display: flex;
+  
+  &:hover {
+    background: $darkblue;
+  }
+}
+
+.button__icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background: svg-load('link.svg', fill= $white, width= 20px, height= 20px) center center no-repeat;
+}
+
+.works__right {
+  width: 50%;
+  height: 100%;
+  background: #ffedb3;
+  position: relative;
+}
+
+.work__picture {
+  width: 100%;
+  height: auto;
+  background: #e3e2de;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 60px;
+}
+
+.work__img {
+  width: 650px;
+  height: 417px;
+  display: block;
+}
+
+.work__buttons {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.work-button__left, .work-button__right {
+  width: 50%;
+  height: 225px;
+  position: relative;
+  overflow: hidden;
+  background: #aaabb7;
+  transition: background .5s ease;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: $dark;
+  }
+}
+
+.work-button__pic {
+  width: 450px;
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom: 0;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.work-button__arrow-up, .work-button__arrow-down {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: svg-load('arrow_down.svg', fill= $white, width= 40px, height= 40px) center center no-repeat;
+}

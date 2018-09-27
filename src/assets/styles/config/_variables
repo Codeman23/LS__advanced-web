@@ -1,0 +1,19 @@
+//color
+
+$white: #ffffff;
+$beige: #eeebdf;
+$green: #16c2aa;
+$text-color: #474b57;
+$grey: #373e42;
+$light-grey: #dfdcd5;
+$test: #000;
+$dark: #474b57;
+$darkblue: #093c97;
+$blue: #0649bd;
+$red: #e34845;
+
+//resolutions
+
+$laptop: 966px;
+$tablets: 768px;
+$phones: 480px;

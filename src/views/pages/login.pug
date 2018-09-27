@@ -1,0 +1,31 @@
+extends ../main.layout.pug
+
+block content
+    section.login
+        form.form
+            .form__wrap
+                .subtitle Авторизуйтесь
+                .form__elem
+                    label(for='name' ).elem-icon__name
+                        input(type='name', name='name', id='name', placeholder='Логин').form__input
+                .form__elem
+                    label(for='family').elem-icon__pass
+                        input(type='password', name='key', id='family', placeholder='Пароль').form__input
+                .form__controls
+                    .form__checkbox
+                        input(type='checkbox', name= 'checkbox', value='', id= 'call').form__checkbox-elem
+                        label(for='call').form__checkbox-name Я человек
+                    .radios-title Вы точно не робот?
+                    .form__radios-container
+                        .form__radio
+                            input(type='radio' name= 'radio' id='yes').form__radio-elem
+                            label(for='yes').form__radio-name Да
+                        .form__radio
+                            input(type='radio' name= 'radio' id='Nope').form__radio-elem
+                            label(for='Nope').form__radio-name Не уверен
+            .form__buttons
+                a(href='#').form__button-left На главную
+                a(href='#').form__button-right Войти
+
+        .login__bottom
+            p.login__desc © Владимир Астахов | создано с любовью в LoftSchool | 2016

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="172px" height="133px" viewBox="0 0 172 133" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>stars2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="stars2" transform="translate(86.000000, 66.500000) rotate(-180.000000) translate(-86.000000, -66.500000) " fill="#FF0000" fill-rule="nonzero">
+            <circle id="Oval" cx="4.25" cy="92.25" r="4.25"></circle>
+            <circle id="Oval" cx="48.25" cy="128.25" r="4.25"></circle>
+            <circle id="Oval" cx="72.75" cy="52.75" r="4.75"></circle>
+            <circle id="Oval" cx="8.25" cy="22.25" r="4.25"></circle>
+            <circle id="Oval" cx="117.25" cy="96.25" r="2.75"></circle>
+            <circle id="Oval" cx="126.25" cy="41.25" r="1.911"></circle>
+            <circle id="Oval" cx="167.25" cy="4.25" r="4.25"></circle>
+            <path d="M73.8951937,54.5686659 L72.6910942,54.8631414 L8.0273154,22.6976735 L8.4726846,21.8023265 L72.8089058,53.8048586 L72.4004868,53.107548 L73.0995132,52.392452 L74.1970892,53.4653634 L126.008675,40.7942832 L169.085175,1.92036849 L117.869798,96.156663 L118.5232,96.7953822 L117.351851,96.7539185 L48.1759901,128.835477 L2.78555484,91.6978481 L115.9768,95.7046178 L73.8951937,54.5686659 Z M116.900487,96.607548 L117.267688,95.750313 L115.9768,95.7046178 L116.900487,96.607548 Z M75.0394753,54.2888196 L117.126529,95.4300963 L165.414825,6.57963151 L126.491325,41.7057168 L75.0394753,54.2888196 Z M5.71444516,92.8021519 L48.3240099,127.664523 L115.143555,96.6757487 L5.71444516,92.8021519 Z" id="Shape"></path>
+            <polygon id="Shape" points="48.7186998 131.159872 47.7813002 131.508128 8.03130023 24.5131279 8.96869977 24.1648721"></polygon>
+        </g>
+    </g>
+</svg>
