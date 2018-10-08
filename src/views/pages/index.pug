@@ -1,95 +1,58 @@
-extends ../main.layout.pug
-
-block variables
-  - var title = 'Главная страница'
+extends ../auth.layout.pug
 
 block content
-  section.person
-    .person__picture
-    -
-      var socials = [
-      ['vk', 'http://vk.com'],
-      ['github', 'http://gh.com'],
-      ['in', 'http://in.com']
-      ]
-    .person__links
-      ul.socials
-        each item in socials
-          li.socials__item
-            a(href= `${item[1]}`).socials__link
-              +icon(item[0], 'socials__link-icon')
+    section.login-wrap
+        .login
+            form.form
+                .form__wrap
+                    .subtitle Авторизуйтесь
+                    .form__elem
+                        label(for='name' ).elem-icon__name
+                            input(type='name', name='name', id='name', placeholder='Логин', required="required").form__input
+                    .form__elem
+                        label(for='family').elem-icon__pass
+                            input(type='password', name='key', id='family', placeholder='Пароль',required="required").form__input
+                    .form__controls
+                        .form__checkbox
+                            input(type='checkbox', name= 'checkbox', value='', id= 'call').form__checkbox-elem
+                            label(for='call').form__checkbox-name Я человек
+                        .radios-title Вы точно не робот?
+                        .form__radios-container
+                            .form__radio
+                                input(type='radio' name= 'radio' id='yes').form__radio-elem
+                                label(for='yes').form__radio-name Да
+                            .form__radio
+                                input(type='radio' name= 'radio' id='Nope').form__radio-elem
+                                label(for='Nope').form__radio-name Не уверен
+                .form__buttons
+                    a(href='about.html').form__button-left На главную
+                    button(type=submit).form__button-right Войти
 
-    .person__menu
-      a(href='#').hamburger
+            //    .form__wrap.form__wrap_user
+            //        .user
+            //            img(src='assets/images/content/avatar-140.jpg', alt='avatar').user__pic
+            //        .user__fio Антон Дубовский
+            //        .user__info Личный сайт разработчика
+            //
+            //        -
+            //            var socials = [
+            //            ['vk', 'http://vk.com'],
+            //            ['github', 'http://gh.com'],
+            //            ['in', 'http://in.com']
+            //            ]
+            //
+            //        ul.socials.socials__user
+            //            each item in socials
+            //                li.socials__item.socials__item__user
+            //                    a(href= `${item[1]}`).socials__link
+            //                        +icon(item[0], 'socials__link-icon_user')
+            //
+            //    .form__buttons.form__buttons_user
+            //        a(href='index.html').form__button-left.form__button-left_user Мои работы
+            //        a(href='about.html').form__button-middle Обо мне
+            //        a(href='blog.html').form__button-right.form__button-right_user Блог
+            //
+            //a(href='#').autorize_button Авторизоавться
 
-    .person__title
-      .person__bg
-      .section-title
-        img(src='assets/images/content/avatar-140.jpg', alt='avatar').section-title__pic
-
-      .user__description
-        .user__name Антон Дубовский
-        .user__info Личный сайт разработчика
-
-    a(href="#").down-btn.hero__down-btns
-
-  section.works
-    .works__triangles
-      .about__left-title.about__left-title_portfolio
-        .block-title.block-title_portfolio Мои работы
-
-    .works__descr
-      .works__left
-        .works__info
-          .block-subtitle.block-subtitle_works Сайт школы онлайн образования
-          .works__tags Html , css, javascript
-          a(href="#").button-graphic
-            .button__icon
-            .button__desc Посмотреть сайт
-
-      .works__right
-        .work__picture
-          img(src='assets/images/content/work_big.png', alt='work').work__img
-        .work__buttons
-          .work-button__left
-            img(src='assets/images/content/work_small.jpg', alt='work-small').work-button__pic
-            .work-button__arrow-up
-          .work-button__right
-            img(src='assets/images/content/work_small.jpg', alt='work-small').work-button__pic
-            .work-button__arrow-down
-
-  section.speakers
-    .about__left-title.about__left-title_speakers
-      .block-title.block-title_portfolio Что обо мне говорят
-    ul.speakers__list
-      li.speakers__item
-        img(src='assets/images/content/avatar-140.jpg', alt='work-small').speakers__picture
-        .speaker__desc
-          p.speakers__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-          p.speakers__autor Ковальчук Дмитрий
-          p.speakers__profetion — основатель Loftschool
-      li.speakers__item
-        img(src='assets/images/content/avatar-140.jpg', alt='work-small').speakers__picture
-        .speaker__desc
-          p.speakers__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-          p.speakers__autor Ковальчук Дмитрий
-          p.speakers__profetion — основатель Loftschool
-    form.speakers__form
-      .speakers-form__wrap
-        .block-subtitle.block-subtitle__white Связатся со мной
-        .speakers-form__elem
-          input(type='text', name='name' placeholder= 'Ваше имя').speakers-form__input
-        .speakers-form__elem
-          input(type='text', name='name' placeholder= 'Ваш email').speakers-form__input
-        .speakers-form__elem
-          textarea(name='textarea', cols='40', rows='8', placeholder= 'Ваше сообщение').speakers-form__textarea
-
-      .speakers-form__buttons
-        a(href='#').speakers-form__button-left Отправть
-        a(href='#').speakers-form__button-right Очистить
-    .speaker__arrow
-
-  include ./../common/_footer
-
-
-
+            .login__bottom
+                p.login__desc © Владимир Астахов | создано с любовью в LoftSchool | 2016

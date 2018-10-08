@@ -1,6 +1,6 @@
 .works {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: auto;
 
   display: flex;
@@ -11,8 +11,8 @@
 
 .works__triangles {
   position: relative;
-  width: 100%;
-  height: 340px;
+  width: 100vw;
+  height: 370px;
 
   display: flex;
   justify-content: center;
@@ -20,10 +20,9 @@
   padding: 70px;
    &:after{
      content:'';
-     width: 100%;
-     height: 100%;
-     background: svg-load('bg.svg', fill=#0d1120) no-repeat center top;
+     background: svg-load('bg.svg', fill=#0d1120, width= 100%, height= 100%) no-repeat center top;
      position: absolute;
+     background-size: cover;
      top: 0;
      left: 0;
      right: 0;
@@ -31,34 +30,77 @@
      z-index: 0;
      opacity: .8;
    }
+  @include tablets {
+    height: 270px;
+    padding: 80px 0 50px 0;
+  }
+  @include phones {
+    height: 200px;
+    padding: 60px 0 40px 0;
+  }
+
 }
 
 .about__left-title_portfolio {
   z-index: 1;
   &::before {
-    background: svg-load('stars2.svg', fill= #313441, width= 250px, height= 170px) center center no-repeat;
+    opacity: .3;
+  }
+
+  @include tablets {
+    &::before {
+      content: '';
+      position: absolute;
+      background: svg-load('stars2.svg', fill= #dbe0e6, width= 168px, height= 106px) center center no-repeat;
+      z-index: 0;
+    }
+  }
+
+  @include phones {
+
+    &::before {
+      content: '';
+      position: absolute;
+      background: svg-load('stars2.svg', fill= #dbe0e6, width= 150px, height= 85px) center center no-repeat;
+      z-index: 0;
+    }
   }
 }
 
 .block-title_portfolio {
   color: $white;
+  width: 400px;
+  text-align: center;
+  line-height: 1;
 }
 
-.works__descr {
-  position: relative;
-  width: 100%;
+.works__wrapper {
+  height: 800px;
+  //min-height: 600px;
+  width: 100vw;
+  background: #f0efe9;
+  display: grid;
+  grid-template:
+          "info display" 70%
+          "info buttons" 30%
+    / 1fr 1fr;
 
-  display: flex;
-  background: $white;
+  @include tablets {
+    height: auto;
+    grid-template:
+            "display" 400px
+            "info" 300px
+            "buttons" 250px
+      / 1fr;
+
+  }
 }
 
 .works__left {
-  width: 50%;
-  background: $beige;
-
+  grid-area: info;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center
 }
 
 .works__info {
@@ -69,18 +111,55 @@
 }
 
 .block-subtitle_works {
-  width: 60%;
+  width: 70%;
   line-height: 1;
   margin-bottom: 50px;
   &:after {
     top: 60px;
   }
+
+  @include notebook {
+    width: 100%;
+  }
+
+  @include tablets {
+    margin-bottom: 45px;
+    &:after {
+      top: 20px;
+    }
+  }
+
+  @include tablets-mid {
+    width: 90%;
+    &:after {
+      top: 60px;
+    }
+  }
+
+  @include phones {
+    font-size: 21px;
+    line-height: 1.2;
+    margin-bottom: 35px;
+    &:after {
+      top: 35px;
+    }
+  }
+
 }
+
 
 .works__tags {
   color: $blue;
   text-transform: uppercase;
   margin-bottom: 40px;
+
+  @include tablets {
+    margin-bottom: 25px;
+  }
+
+  @include phones {
+    margin-bottom: 15px;
+  }
 }
 
 .button-graphic {
@@ -109,26 +188,35 @@
 }
 
 .works__right {
-  width: 50%;
-  height: 100%;
-  background: #ffedb3;
-  position: relative;
+  grid-area: display;
+  background: #e3e2de;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .work__picture {
   width: 100%;
   height: auto;
   background: #e3e2de;
+  position: relative;
 
   display: flex;
   justify-content: center;
   align-content: center;
   padding: 60px;
+
+  @include tablets {
+    padding: 35px;
+  }
 }
 
 .work__img {
-  width: 650px;
-  height: 417px;
+  max-width: 652px;
+  max-height: 417px;
+  width: 100%;
+  height: 100%;
   display: block;
 }
 
@@ -136,16 +224,20 @@
   width: 100%;
   height: auto;
   display: flex;
+  grid-area: buttons;
+  user-select: none;
 }
 
 .work-button__left, .work-button__right {
   width: 50%;
-  height: 225px;
-  position: relative;
+  height: auto;
   overflow: hidden;
-  background: #aaabb7;
   transition: background .5s ease;
   cursor: pointer;
+  position: relative;
+  user-select: none;
+  padding: 20px;
+  background: #afb0b8;
 
   display: flex;
   align-items: center;
@@ -154,15 +246,18 @@
   &:hover {
     background: $dark;
   }
+
+  @include tablets {
+    padding: 15px;
+  }
 }
 
+
 .work-button__pic {
-  width: 450px;
-  position: absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom: 0;
+  max-width: 352px;
+  max-height: 225px;
+  width: 100%;
+  height: 100%;
   opacity: 0.5;
   z-index: 0;
 }
@@ -172,4 +267,13 @@
   height: 100%;
   z-index: 1;
   background: svg-load('arrow_down.svg', fill= $white, width= 40px, height= 40px) center center no-repeat;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.work-button__arrow-up {
+  background: svg-load('arrow_up.svg', fill= $white, width= 40px, height= 40px) center center no-repeat;
 }

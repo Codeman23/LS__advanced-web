@@ -1,0 +1,122 @@
+.hidden-menu {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.hidden-menu_active {
+  display: block;
+}
+
+.hidden-menu__left {
+  background: rgba(24, 54, 105, 0.9);
+  width: 50vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hidden-menu__right {
+  background: rgba(24, 54, 105, 0.9);
+  width: 50vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.hidden-menu__close {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  top:0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include phones {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+
+.close-icon {
+  width: 40px;
+  height: 40px;
+  background: svg-load('x.svg', fill=$white) center center no-repeat;
+  cursor: pointer;
+  z-index: 10;
+  &:hover {
+    background: svg-load('x.svg', fill=$blue) center center no-repeat;
+  }
+
+  @include phones {
+    width: 20px;
+    height: 20px;
+    background: svg-load('x.svg', fill=$white, width= 20px, height= 20px) center center no-repeat;
+  }
+}
+
+.hidden-menu__list {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.hidden-menu__item {
+  text-align: center;
+}
+
+.hidden-menu__link {
+  color: #fff;
+  text-decoration: none;
+  font-family: sansus, sans-serif;
+  font-size: 63px;
+  text-transform: uppercase;
+  display: block;
+  position: relative;
+  line-height: 2.5;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 66px;
+    height: 3px;
+    background: #fff;
+
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -85%);
+    opacity: 0;
+    transition: opacity .3s ease;
+  }
+
+  &:hover {
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  @include tablets {
+    font-size: 49px;
+  }
+
+  @include phones {
+    line-height: 2.2;
+    font-size: 35px;
+  }
+}

@@ -7,39 +7,12 @@ block scripts
   script(src='about.bundle.js')
 
 block content
-  section.person
-    .person__picture
-    -
-      var socials = [
-        ['vk', 'http://vk.com'],
-        ['github', 'http://gh.com'],
-        ['in', 'http://in.com']
-      ]
-    .person__links
-      ul.socials
-        each item in socials
-          li.socials__item
-            a(href= `${item[1]}`).socials__link
-              +icon(item[0], 'socials__link-icon')
-
-    .person__menu
-      a(href='#').hamburger
-
-    .person__title
-      .person__bg
-      .section-title
-        img(src='assets/images/content/avatar-140.jpg', alt='avatar').section-title__pic
-
-      .user__description
-        .user__name Антон Дубовский
-        .user__info Личный сайт разработчика
-
-    a(href="#").down-btn.hero__down-btns
+  include ./../_parts/_hidden-menu
+  include ./../_parts/_person
 
   section.about
     .about__left
 
-      //.about__triangle
       .triangle_fill_white
 
       .about__left-title
@@ -58,7 +31,6 @@ block content
 
     .about__right
 
-      //.about__triangle
       .triangle_fill_beige
 
       .about__right-title
@@ -67,25 +39,7 @@ block content
       .about__right-description.text-content
         p Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
       .about__right-content
-        -
-          var skills = [
-          ['Frontend', [['Html5', 30], ['css3', 50], ['javascript', 70]]],
-          ['Backend', [['Html5', 30], ['css3', 50], ['javascript', 70]]],
-          ['Workflow', [['Html5', 30], ['css3', 50], ['javascript', 70]]]
-          ]
-
-        ul.skills-list
-          each skillsrow in skills
-            li.skills-list__item.skills-row
-              .skills-row__title #{skillsrow[0]}
-              ul.skills-row__list
-                each skill in skillsrow[1]
-                  li.skills-row__item
-                    figure.skill(data-percents="70")
-                      svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
-                        circle(cx="50" cy="50" r="40").skill__circle.skill__circle_under
-                        circle(cx="50" cy="50" r="40", style="animation-delay: -20s").skill__circle.skill__circle_above
-                      .skill__title #{skill[0]}
+        #skills-component
 
   section.map
     .google-map

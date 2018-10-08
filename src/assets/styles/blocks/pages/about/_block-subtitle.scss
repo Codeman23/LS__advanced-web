@@ -19,13 +19,35 @@
     left: 50%;
     transform: translate(-50%, 30px);
   }
+
+  @include  phones {
+    font-size: 21px;
+
+    &:after {
+      width: 56px;
+
+      top: 20px;
+      left: 50%;
+      transform: translate(-50%, 20px);
+    }
+  }
 }
 
 .block-subtitle_graphics {
-  width: 40%;
+  width: 300px;
   line-height: 1;
   margin-bottom: 50px;
   &:after {
     top: 60px;
+  }
+
+  @include  phones {
+    width: 200px;
+    line-height: 1.1;
+    &:after {
+      top: 30px;
+      transform: translate(-50%, 30px);
+    }
+
   }
 }

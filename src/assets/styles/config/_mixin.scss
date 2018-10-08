@@ -1,0 +1,30 @@
+@mixin notebook {
+  @media screen and (max-width: 1200px)  {
+    @content;
+  }
+}
+
+@mixin tablets {
+  @media screen and (max-width: 768px)  {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media screen and (max-width: 480px)  {
+    @content;
+  }
+}
+
+@mixin mini-mobiles {
+  @media screen and (max-width: 320px)  {
+    @content;
+  }
+}
+
+
+@mixin tablets-mid {
+  @media screen and (max-width: 550px)  {
+    @content;
+  }
+}

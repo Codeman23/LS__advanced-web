@@ -1,0 +1,56 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Главная страница'
+
+block scripts
+  script(src='works.bundle.js')
+
+
+block content
+  include ./../_parts/_hidden-menu
+  include ./../_parts/_person
+
+  section.works
+    .works__triangles
+      .about__left-title.about__left-title_portfolio
+        .block-title.block-title_portfolio Мои работы
+
+    .works__descr
+    #slider-component
+
+  section.speakers
+    .about__left-title.about__left-title_speakers
+      .block-title.block-title_portfolio Что обо мне говорят
+    ul.speakers__list
+      li.speakers__item
+        img(src='assets/images/content/avatar-140.jpg', alt='work-small').speakers__picture
+        .speaker__desc
+          p.speakers__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+          p.speakers__autor Ковальчук Дмитрий
+          p.speakers__profetion — основатель Loftschool
+      li.speakers__item
+        img(src='assets/images/content/avatar-140.jpg', alt='work-small').speakers__picture
+        .speaker__desc
+          p.speakers__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+          p.speakers__autor Ковальчук Дмитрий
+          p.speakers__profetion — основатель Loftschool
+    form.speakers__form
+      .speakers-form__wrap
+        .block-subtitle.block-subtitle__white Связатся со мной
+        .speakers-form__elem
+          input(type='text', name='name' placeholder= 'Ваше имя').speakers-form__input
+        .speakers-form__elem
+          input(type='text', name='name' placeholder= 'Ваш email').speakers-form__input
+        .speakers-form__elem
+          textarea(name='textarea', cols='40', rows='8', placeholder= 'Ваше сообщение').speakers-form__textarea
+
+      .speakers-form__buttons
+        a(href='#').speakers-form__button-left Отправть
+        a(href='#').speakers-form__button-right Очистить
+    .speaker__arrow
+
+  include ./../common/_footer
+
+
+

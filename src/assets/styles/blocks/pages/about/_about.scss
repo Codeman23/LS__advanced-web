@@ -1,24 +1,58 @@
 .about {
   position: relative;
-  width: 100%;
+  width: 100vw;
+  margin-top: 50px;
   height: auto;
   display: flex;
+
+  @include tablets {
+    margin-top: 130px;
+    flex-direction: column;
+  }
+
+  @include phones {
+    margin-top: 95px;
+  }
 }
 
 .about__left, .about__right {
   position: relative;
-  width: 50%;
-  padding: 160px 30px  120px 30px;
+  width: 50vw;
+  padding: 200px 30px  120px 30px;
 
   display: flex;
   justify-content: center;
   align-items: flex-start;
+
+  @include tablets {
+    width: 100vw;
+  }
+}
+
+.about__left {
+  @include notebook {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  @include tablets {
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    background: $beige;
+  }
+
+  @include phones {
+    padding: 0 20px 30px 20px;
+  }
 }
 
 .triangle_fill_white, .triangle_fill_beige {
   width: 100%;
-  height: 100%;
-  background: svg-load('about_bg_left.svg', fill=$white) no-repeat;
+  height: auto;
+  background: svg-load('about_bg_left.svg', fill=$beige, width= 50%, height= auto) no-repeat;
+  background-size: cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -27,30 +61,124 @@
   z-index: 0;
 }
 
+.triangle_fill_white {
+  width: 100vw;
+  @include tablets {
+    top: -65px;
+    background: svg-load('bg.svg', fill=$beige, width= 100%, height= auto) no-repeat;
+  }
+}
+
+.triangle_fill_beige {
+  background: svg-load('about_bg_left.svg', fill=$light-grey) no-repeat;
+  transform: scale(-1, 1);
+  background-size: cover;
+
+  @include tablets {
+    background: #f4f5f0;
+  }
+}
+
+.about__left-title {
+  position: relative;
+  width: 50%;
+  height: auto;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 270px;
+    height: 192px;
+    background: svg-load('stars2.svg', fill= #dbe0e6, width= 270px, height= 192px) center center no-repeat;
+    z-index: 0;
+  }
+
+  @include notebook {
+    width: 100%;
+    &::before {
+      background: svg-load('stars2.svg', fill= #dbe0e6, width= 173px, height= 124px) center center no-repeat;
+    }
+  }
+
+  @include phones {
+    width: 100%;
+    &::before {
+      background: svg-load('stars2.svg', fill= #dbe0e6, width= 92px, height= 66px) center center no-repeat;
+    }
+  }
+}
+
 .about__left-content {
   position: relative;
   width: 50%;
   margin-left: 90px;
+
+  @include notebook {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 60px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  @include phones {
+    margin-top: 30px;
+  }
 }
 
 .user-description__image {
   margin-bottom: 40px;
+
+  @include notebook {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include phones {
+    margin-bottom: 20px;
+  }
 }
 
 .user-description__avatar {
-  width: 442px;
-  height: 390px;
+  max-width: 442px;
+  max-height: 390px;
+  width: 100%;
+  height: 100%;
   display: block;
+}
+
+.user-description__data {
+  width: 100%;
 }
 
 .about__right {
   flex-direction: column;
-  padding: 150px 30px  120px 30px;
-}
+  padding: 150px 30px 120px 30px;
 
-.triangle_fill_beige {
-  background: svg-load('about_bg_left.svg', fill=$beige) no-repeat;
-  transform: scale(-1, 1);
+  @include notebook {
+    padding: 150px 30px 30px 30px;
+  }
+
+  @include tablets {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  @include phones {
+    padding: 30px 20px;
+  }
 }
 
 .about__right-title {
@@ -66,26 +194,38 @@
   margin-bottom: 40px;
 }
 
-.skills-row__list {
+.skills {
+  width: 100%;
+}
+
+.skills-list__item {
   width: 100%;
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 20px;
+
+  @include tablets {
+    justify-content: center;
+    margin: 20px 0;
+  }
 }
 
-.skills-row__item {
+
+.skill{
   width: 120px;
   height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10px 40px 10px 0;
+  margin: 0 30px 30px 0;
+  position: relative;
+
+  @include tablets {
+    margin: 5px 10px;
+  }
 }
 
-.skill {
-  position: relative;
-  width: 120px;
-  height: 120px;
-}
 
 .skill__title {
   position: absolute;
@@ -118,25 +258,32 @@
   animation-play-state: paused;
 }
 
-.skill__circle_above[style="animation-delay: -100s"] {
-  animation: initial;
-  stroke-dashoffset: 0;
-}
+//.skill__circle_above[style="animation-delay: -100s"] {
+//  animation: initial;
+//  stroke-dashoffset: 0;
+//}
 
-@keyframes fill {
-  from {
-    stroke-dashoffset: 251;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
+//@keyframes fill {
+//  from {
+//    stroke-dashoffset: 251;
+//  }
+//  to {
+//    stroke-dashoffset: 0;
+//  }
+//}
 
 .about__right-content {
   z-index: 1;
 }
 
-.skills-row__title {
+.skills-list__title {
   font-size: 28px;
   font-family: Roboto, Helvetica, sans-serif;
+  -ms-text-align-last: right;
+  text-align: left;
+
+  @include tablets {
+    font-size: 21px;
+    text-align: center;
+  }
 }

@@ -1,26 +1,15 @@
-.about__left-title {
-  position: relative;
-  width: auto;
-  height: auto;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &::before {
-    content: '';
-    position: absolute;
-    width: 270px;
-    height: 192px;
-    background: svg-load('stars2.svg', fill= #dbe0e6, width= 270px, height= 192px) center center no-repeat;
-    z-index: 0;
-  }
-}
-
 .block-title {
   font-family: sansus, sans-serif;
   font-size: 62px;
   text-transform: uppercase;
   z-index: 1;
   line-height: 0.7;
+
+  @include tablets {
+    font-size: 48px;
+  }
+
+  @include tablets {
+    font-size: 35px;
+  }
 }

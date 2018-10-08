@@ -27,6 +27,10 @@
   top:15%;
   bottom: 1px;
   background-color: $darkblue;
+
+  @include phones {
+    top: 5%;
+  }
 }
 
 .form__checkbox-elem:checked + .form__checkbox-name:before {
