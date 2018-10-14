@@ -14,6 +14,9 @@ import "./parts/_hiddenmenu";
     });
 
     window.onscroll = function() {
+
+        myFunction()
+
         var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
 
         for (i in sections) {
@@ -25,3 +28,17 @@ import "./parts/_hiddenmenu";
     };
 })();
 
+
+//фиксировать боковое меню при скролле//=================================================//
+
+const navbar = document.querySelector(".blog-menu__list");
+
+const sticky = navbar.offsetHeight;
+
+function myFunction() {
+    if (window.pageYOffset >= sticky * 2.6) {
+        navbar.classList.add("blog-menu__list_fixed")
+    } else {
+        navbar.classList.remove("blog-menu__list_fixed");
+    }
+}

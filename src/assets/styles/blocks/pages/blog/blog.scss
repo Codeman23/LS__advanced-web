@@ -108,9 +108,9 @@
 .blog__menu {
   width: 25%;
   height: auto;
-  //display: flex;
-  //flex-direction: column;
-  //align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @include tablets {
     display: none;
@@ -118,12 +118,21 @@
 }
 
 .blog-menu__list {
-  margin-top: 10px;
+  margin-top: 20px;
   text-align: right;
   display: block;
-  position: fixed;
+  position: relative;
+  transition: margin-top .5s ease;
 }
 
+.blog-menu__list_fixed {
+  position: fixed;
+  top: 0;
+
+  @include mini-notebook {
+    width: 200px;
+  }
+}
 
 .blog-menu__item {
   margin-bottom: 30px;

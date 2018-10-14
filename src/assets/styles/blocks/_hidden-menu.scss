@@ -20,7 +20,9 @@
   height: 100vh;
   position: absolute;
   top: 0;
-  left: 0;
+  left: -50%;
+
+  transition: left .6s ease-in-out;
 }
 
 .hidden-menu__right {
@@ -29,7 +31,9 @@
   height: 100vh;
   position: absolute;
   top: 0;
-  right: 0;
+  right: -50%;
+
+  transition: right .6s ease-in-out;
 }
 
 .hidden-menu__close {
@@ -75,10 +79,15 @@
   justify-content: center;
   flex-direction: column;
   position: relative;
+
+  //opacity: 0;
+  transition: opacity .5s ease;
 }
 
 .hidden-menu__item {
   text-align: center;
+  opacity: 0;
+  transition: opacity .5s .5s;
 }
 
 .hidden-menu__link {

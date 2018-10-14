@@ -54,6 +54,7 @@
     "postcss-rgb": "^1.0.0",
     "postcss-scss": "^2.0.0",
     "postcss-svgo": "^2.1.6",
+    "smoothscroll-polyfill": "^0.4.3",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "vue-loader": "^14.2.3",
     "vue-template-compiler": "2.5.13",

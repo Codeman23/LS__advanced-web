@@ -5,6 +5,7 @@ block variables
 
 block scripts
   script(src='about.bundle.js')
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDI-Z_aYKP_t65trttK4Po8Ksaj1sITZA&callback=initMap" async defer)
 
 block content
   include ./../_parts/_hidden-menu
@@ -42,7 +43,7 @@ block content
         #skills-component
 
   section.map
-    .google-map
+    .google-map#google-map
     .map__data
       .contacts
         h2.contacts__title

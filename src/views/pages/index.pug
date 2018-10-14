@@ -2,57 +2,63 @@ extends ../auth.layout.pug
 
 block content
     section.login-wrap
+        .parallax
+            .parallax__layer
+                video(src='/assets/images/bg/night.mp4', type="video/mp4", frameborder="0", allowfullscreen autoplay loop muted).parallax__video
+            .parallax__layer
+                img(src='/assets/images/bg/night_mountains.png', alt='mountains').parallax__img
+
         .login
             form.form
-                .form__wrap
-                    .subtitle Авторизуйтесь
-                    .form__elem
-                        label(for='name' ).elem-icon__name
-                            input(type='name', name='name', id='name', placeholder='Логин', required="required").form__input
-                    .form__elem
-                        label(for='family').elem-icon__pass
-                            input(type='password', name='key', id='family', placeholder='Пароль',required="required").form__input
-                    .form__controls
-                        .form__checkbox
-                            input(type='checkbox', name= 'checkbox', value='', id= 'call').form__checkbox-elem
-                            label(for='call').form__checkbox-name Я человек
-                        .radios-title Вы точно не робот?
-                        .form__radios-container
-                            .form__radio
-                                input(type='radio' name= 'radio' id='yes').form__radio-elem
-                                label(for='yes').form__radio-name Да
-                            .form__radio
-                                input(type='radio' name= 'radio' id='Nope').form__radio-elem
-                                label(for='Nope').form__radio-name Не уверен
-                .form__buttons
-                    a(href='about.html').form__button-left На главную
-                    button(type=submit).form__button-right Войти
+                .user-wrap.wrap-active
+                    .form__wrap.form__wrap_user
+                        img(src='assets/images/content/avatar-140.jpg', alt='avatar').user__pic
+                        .user__fio Антон Дубовский
+                        .user__info Личный сайт разработчика
 
-            //    .form__wrap.form__wrap_user
-            //        .user
-            //            img(src='assets/images/content/avatar-140.jpg', alt='avatar').user__pic
-            //        .user__fio Антон Дубовский
-            //        .user__info Личный сайт разработчика
-            //
-            //        -
-            //            var socials = [
-            //            ['vk', 'http://vk.com'],
-            //            ['github', 'http://gh.com'],
-            //            ['in', 'http://in.com']
-            //            ]
-            //
-            //        ul.socials.socials__user
-            //            each item in socials
-            //                li.socials__item.socials__item__user
-            //                    a(href= `${item[1]}`).socials__link
-            //                        +icon(item[0], 'socials__link-icon_user')
-            //
-            //    .form__buttons.form__buttons_user
-            //        a(href='index.html').form__button-left.form__button-left_user Мои работы
-            //        a(href='about.html').form__button-middle Обо мне
-            //        a(href='blog.html').form__button-right.form__button-right_user Блог
-            //
-            //a(href='#').autorize_button Авторизоавться
+                        -
+                            var socials = [
+                            ['vk', 'http://vk.com'],
+                            ['github', 'http://gh.com'],
+                            ['in', 'http://in.com']
+                            ]
+
+                        ul.socials.socials__user
+                            each item in socials
+                                li.socials__item.socials__item__user
+                                    a(href= `${item[1]}`).socials__link
+                                        +icon(item[0], 'socials__link-icon_user')
+                    .form__buttons_user
+                        a(href='works.html').form__button-left.form__button-left_user Мои работы
+                        a(href='about.html').form__button-middle Обо мне
+                        a(href='blog.html').form__button-right.form__button-right_user Блог
+
+                .auth-wrap
+                    .form__wrap.form__wrap_inputs
+                        .subtitle Авторизуйтесь
+                        .form__elem
+                            label(for='name' ).elem-icon__name
+                                input(type='name', name='name', id='name', placeholder='Логин', required="required").form__input
+                        .form__elem
+                            label(for='family').elem-icon__pass
+                                input(type='password', name='key', id='family', placeholder='Пароль',required="required").form__input
+                        .form__controls
+                            .form__checkbox
+                                input(type='checkbox', name= 'checkbox', value='', id= 'call').form__checkbox-elem
+                                label(for='call').form__checkbox-name Я человек
+                            .radios-title Вы точно не робот?
+                            .form__radios-container
+                                .form__radio
+                                    input(type='radio' name= 'radio' id='yes').form__radio-elem
+                                    label(for='yes').form__radio-name Да
+                                .form__radio
+                                    input(type='radio' name= 'radio' id='Nope').form__radio-elem
+                                    label(for='Nope').form__radio-name Не уверен
+                    .form__buttons
+                        a(href='about.html').form__button-left На главную
+                        button(type=submit).form__button-right Войти
+
+            button.autorize_button Авторизоавться
 
             .login__bottom
                 p.login__desc © Владимир Астахов | создано с любовью в LoftSchool | 2016
